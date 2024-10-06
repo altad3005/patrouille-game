@@ -1,18 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Set the date of the camp
-    const campDate = new Date('2025-07-15'); // Change this to your camp date
+document.addEventListener('DOMContentLoaded', () => {
+    const countdownElement = document.getElementById('countdown');
+    const eventDate = new Date('2025-06-15T00:00:00').getTime();
 
-    // Function to calculate the remaining days
-    function updateCountdown() {
-        const now = new Date();
-        const timeDifference = campDate - now;
-        const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
 
-        // Display the countdown
-        document.getElementById('countdown').innerText = `Il reste ${daysRemaining} jours avant le camp !`;
-    }
+        if (distance < 0) {
+            countdownElement.textContent = "La compétition est terminée !";
+            return;
+        }
 
-    // Update the countdown immediately and then every day
-    updateCountdown();
-    setInterval(updateCountdown, 24 * 60 * 60 * 1000); // Update every 24 hours
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.textContent = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+    };
+
+    setInterval(updateCountdown, 1000);
 });

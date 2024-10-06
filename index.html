@@ -2,158 +2,94 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrouille Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 <header class="header">
-    <img src="images/LogoPatrouilleGame.png" width="100" height="100" alt="logo">
-    <h1>Patrouille Game</h1>
+    <div class="logo-container">
+        <img src="images/LogoPatrouilleGame.png" alt="logo">
+        <h1>Patrouille Game</h1>
+    </div>
 </header>
-<p><em>Version 1.0 - Ceci est la première version du site. Des améliorations et des ajouts sont à venir ! (Si jamais le temps se présente pour moi)
-N'hésite pas à me parler si tu as des idées pour améliorer le site !
-</em></p> <!-- Message informatif -->
-<p>Le "Patrouille Game" est un jeu qui dure toute l'année scout. Pour chaque jeu en patrouille, vous aurez l'occasion
-    de gagner des points pour monter dans le classement. À la fin de l'année, la patrouille avec le plus de points sera récompensée.
-</p>
 
-<p id="countdown" class="countdown"></p>
-<h2>Le classement des patrouilles</h2>
-<table>
-    <tr>
-        <th>Place</th>
-        <th>Patrouille</th>
-        <th>Animal</th>
-        <th>Points</th>
-        <th>Changement de places</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td><a href="castors.html">Les Castors</a></td>
-        <td><img src="https://img.icons8.com/color/48/000000/beaver.png" alt="Castor"></td>
-        <td>100</td>
-        <td>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="green" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
-            </svg>
-        </td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td><a href="castors.html">Les Loups</a></td>
-        <td><img src="https://img.icons8.com/color/48/000000/wolf.png" alt="Loup"></td>
-        <td>90</td>
-        <td>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="red" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-        </td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td><a href="castors.html">Les Aigles</a></td>
-        <td><img src="https://img.icons8.com/color/48/000000/eagle.png" alt="Aigle"></td>
-        <td>80</td>
-        <td>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="red" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-        </td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td><a href="castors.html">Les Renards</a></td>
-        <td><img src="https://img.icons8.com/color/48/000000/fox.png" alt="Renard"></td>
-        <td>70</td>
-        <td>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="red" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-        </td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td><a href="castors.html">Les Ours</a></td>
-        <td><img src="https://img.icons8.com/color/48/000000/bear.png" alt="Ours"></td>
-        <td>60</td>
-        <td>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="red" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-        </td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td><a href="castors.html">Les Dauphins</a></td>
-        <td><img src="https://img.icons8.com/color/48/000000/dolphin.png" alt="Dauphin"></td>
-        <td>50</td>
-        <td>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="gray" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5m14 6H5" />
-            </svg>
-        </td>
-    </tr>
-</table>
+<main>
+    <section class="info">
+        <p><em>Version 1.0 - Ceci est la première version du site. Des améliorations et des ajouts sont à venir ! N'hésite pas à me parler si tu as des idées pour améliorer le site !</em></p>
+        <p>Le "Patrouille Game" est un jeu qui dure toute l'année scout. À la fin de l'année, la patrouille avec le plus de points sera récompensée.</p>
+    </section>
 
-<h2>Jeux et points gagnés par patrouille</h2>
-<table>
-    <tr>
-        <th>Jeu</th>
-        <th>Les Castors</th>
-        <th>Les Loups</th>
-        <th>Les Aigles</th>
-        <th>Les Renards</th>
-        <th>Les Ours</th>
-        <th>Les Dauphins</th>
-    </tr>
-    <tr>
-        <td>Course d'orientation</td>
-        <td>20</td>
-        <td>10</td>
-        <td>15</td>
-        <td>5</td>
-        <td>10</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>Jeu de piste</td>
-        <td>25</td>
-        <td>15</td>
-        <td>20</td>
-        <td>10</td>
-        <td>0</td>
-        <td>5</td>
-    </tr>
-    <tr>
-        <td>Construction de cabanes</td>
-        <td>30</td>
-        <td>20</td>
-        <td>10</td>
-        <td>15</td>
-        <td>5</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td>Jeu de survie</td>
-        <td>40</td>
-        <td>35</td>
-        <td>25</td>
-        <td>30</td>
-        <td>20</td>
-        <td>15</td>
-    </tr>
-    <tr>
-        <td>Énigmes en équipe</td>
-        <td>10</td>
-        <td>5</td>
-        <td>15</td>
-        <td>0</td>
-        <td>20</td>
-        <td>10</td>
-    </tr>
-</table>
+    <section class="countdown-container">
+        <p id="countdown" class="countdown"></p>
+    </section>
 
-<p><em>Crédits : Alapaha, le chef préféré de ton chef préféré et ChatGPT (chuuut)</em></p>
+    <section class="ranking">
+        <h2>Classement des Patrouilles</h2>
+        <div class="table-container">
+            <table class="ranking-table">
+                <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Patrouille</th>
+                    <th>Points</th>
+                    <th>Changement</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="castors.html">Les Castors</a></td>
+                    <td>100</td>
+                    <td><span class="up-arrow"></span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="castors.html">Les Loups</a></td>
+                    <td>90</td>
+                    <td><span class="down-arrow"></span></td>
+                </tr>
+                <!-- autres patrouilles -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="games">
+        <h2>Jeux et Points Gagnés par Patrouille</h2>
+        <div class="table-container">
+            <table class="games-table">
+                <thead>
+                <tr>
+                    <th>Jeu</th>
+                    <th>Les Castors</th>
+                    <th>Les Loups</th>
+                    <th>Les Aigles</th>
+                    <th>Les Renards</th>
+                    <th>Les Ours</th>
+                    <th>Les Dauphins</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Course d'orientation</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>0</td>
+                </tr>
+                <!-- autres jeux -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p><em>Crédits : Alapaha et ChatGPT</em></p>
+</footer>
 </body>
 </html>
