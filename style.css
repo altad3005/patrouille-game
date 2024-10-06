@@ -88,6 +88,24 @@ h2 {
     color: #2c3e50;
 }
 
+table.games {
+    background-color: #f9f9f9;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.games th, table.games td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table.games th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
 /* Responsive pour mobile */
 @media (max-width: 768px) {
     table {
