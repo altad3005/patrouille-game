@@ -155,6 +155,19 @@ img {
 .back-link:hover {
     text-decoration: underline; /* Ajoute un soulignement au survol */
 }
+body > p:first-of-type {
+    font-size: 1.1em; /* Agrandit la taille de la police */
+    text-align: center; /* Centre le texte */
+    color: #555; /* Change la couleur du texte */
+    margin-bottom: 20px; /* Ajoute de l'espace en dessous */
+}
+
+body > p:last-of-type {
+    font-size: 1.1em; /* Agrandit la taille de la police */
+    text-align: center; /* Centre le texte */
+    color: #777; /* Change la couleur du texte */
+    margin-top: 20px; /* Ajoute de l'espace au-dessus */
+}
 
 
 /* Responsive pour mobile */
