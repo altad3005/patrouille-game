@@ -239,6 +239,12 @@ h1 {
     /* Agrandir la police pour le compte à rebours */
     font-size: 1.5em;
     color: #2c3e50; /* Couleur du texte */
+    /*
+    Mettre une bordure autour du compte à rebours et en gras
+     */
+    border: 2px solid #2c3e50;
+    font-weight: bold;
+    padding: 10px 20px; /* Ajoute du padding autour du texte */
 }
 
 @media (max-width: 480px) {
