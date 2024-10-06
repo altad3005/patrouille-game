@@ -232,6 +232,15 @@ h1 {
     }
 }
 
+.countdown {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du compte à rebours */
+    /* Agrandir la police pour le compte à rebours */
+    font-size: 1.5em;
+    color: #2c3e50; /* Couleur du texte */
+}
+
 @media (max-width: 480px) {
     .header img {
         width: 60px;
