@@ -169,19 +169,52 @@ body > p:last-of-type {
     margin-top: 20px; /* Ajoute de l'espace au-dessus */
 }
 
+/* Conteneur du logo et du titre */
+header {
+    display: flex;
+    align-items: center; /* Aligne verticalement le logo et le titre */
+    justify-content: space-between; /* Espace entre le logo et le titre */
+    padding: 0 20px; /* Ajoute du padding pour ne pas coller au bord */
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px; /* Espace entre le logo et le titre */
+}
+
+h1 {
+    flex-grow: 1; /* Le titre occupe l'espace restant */
+    text-align: center; /* Centre le titre */
+    font-size: 3em;
+    color: #2c3e50;
+}
+
+
 
 /* Responsive pour mobile */
 @media (max-width: 768px) {
-    table {
-        width: 100%;
+    header {
+        flex-direction: column; /* Empile le logo et le titre */
+        text-align: center; /* Centre tout le contenu */
+    }
+
+    .header img {
+        margin: 0 auto; /* Centrer l'image sur mobile */
+        width: 80px;
+        height: 80px; /* Réduit la taille du logo */
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 2em; /* Réduit la taille du titre */
+        text-align: center;
+        margin-top: 10px; /* Ajoute un peu d'espace au-dessus du titre */
     }
 
-    p {
-        font-size: 1em;
+    /* Redimensionner le tableau pour mobile */
+    table {
+        width: 100%; /* Le tableau prend toute la largeur disponible */
+        font-size: 0.9em; /* Réduit la taille du texte dans le tableau */
     }
 
     th, td {
@@ -190,11 +223,35 @@ body > p:last-of-type {
 
     td img {
         width: 30px;
-        height: 30px;
+        height: 30px; /* Réduit la taille des images dans les tableaux */
     }
 
     .icon {
         width: 20px;
-        height: 20px;
+        height: 20px; /* Réduit la taille des icônes */
+    }
+}
+
+@media (max-width: 480px) {
+    .header img {
+        width: 60px;
+        height: 60px; /* Réduire encore la taille du logo */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Réduire encore la taille du titre */
+    }
+
+    table {
+        font-size: 0.8em; /* Réduire un peu plus la taille du texte dans les tableaux */
+    }
+
+    td img {
+        width: 25px;
+        height: 25px; /* Réduire la taille des images encore plus */
+    }
+
+    th, td {
+        padding: 8px;
     }
 }
