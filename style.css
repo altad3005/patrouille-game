@@ -91,7 +91,7 @@ h2 {
     background-color: #f9f9f9;
 }
 
-.up-arrow, .down-arrow {
+.up-arrow, .down-arrow, .same_place {
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -105,6 +105,11 @@ h2 {
 .down-arrow::before {
     content: '↓';
     color: red;
+}
+
+.same_place::before {
+    content: '→';
+    color: #333;
 }
 
 /* Footer */
